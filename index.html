@@ -77,10 +77,11 @@ section{scroll-margin-top:70px}
 /* who I am */
 .about{background:var(--surface-2);border-top:1px solid var(--border);border-bottom:1px solid var(--border)}
 .about-in{max-width:1080px;margin:0 auto;padding:4.5rem 1.5rem;display:grid;grid-template-columns:260px 1fr;gap:3rem;align-items:start}
-.portrait{background:var(--ink);border-radius:10px;aspect-ratio:1/1.12;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:0.6rem;position:relative;overflow:hidden}
+.portrait{background:var(--ink);border-radius:10px;aspect-ratio:1/1.2;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:0.6rem;position:relative;overflow:hidden}
 .portrait svg{position:absolute;width:135%;opacity:0.06;left:-18%;top:6%}
 .portrait b{font-family:'Archivo Black',sans-serif;font-size:2.6rem;color:var(--gilt-light);position:relative}
 .portrait span{font-family:'DM Mono',monospace;font-size:0.72rem;letter-spacing:0.08em;color:var(--surface-2);position:relative}
+.portrait-photo{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center 22%;z-index:2}
 .about-body h2{font-family:'Archivo Black',sans-serif;font-size:clamp(1.7rem,3.6vw,2.4rem);color:var(--ink);margin:0.7rem 0 1.1rem}
 .about-body p{margin-bottom:1rem;max-width:640px;font-size:1.02rem}
 .about-body p:last-child{margin-bottom:0}
@@ -141,7 +142,7 @@ footer{background:var(--ink);border-top:1px solid rgba(250,247,239,0.12)}
   <div class="wrap">
     <div class="sec-head">
       <p class="label">The work</p>
-      <h2>One body of work, in four places.</h2>
+      <h2>One body of work.</h2>
       <p>The writing, the practitioner method, and the tools that come out of them.</p>
     </div>
     <div class="grid">
@@ -157,6 +158,12 @@ footer{background:var(--ink);border-top:1px solid rgba(250,247,239,0.12)}
         <p>The solution-architecture practitioner framework. Six modules. Two pillars. One loop.</p>
         <span class="go">architecture.ordoanimi.com &#8594;</span>
       </a>
+      <a class="card" href="https://academy.ordoanimi.com/">
+        <small>Learning</small>
+        <h3>OrdoAnimi Academy</h3>
+        <p>The learning layer &mdash; practitioner pathways, courses, and certification that teach the method.</p>
+        <span class="go">academy.ordoanimi.com &#8594;</span>
+      </a>
       <a class="card" href="https://valour.ordoanimi.com/">
         <small>Product</small>
         <h3>Valour&#8482;</h3>
@@ -164,9 +171,9 @@ footer{background:var(--ink);border-top:1px solid rgba(250,247,239,0.12)}
         <span class="go">valour.ordoanimi.com &#8594;</span>
       </a>
       <a class="card" href="https://executive.ordoanimi.com/">
-        <small>Program</small>
+        <small>Academy stream</small>
         <h3>Executive Fast Track</h3>
-        <p>C-suite fluency, executive translation, and boardroom engagement.</p>
+        <p>The Academy&rsquo;s C-suite stream &mdash; executive fluency, translation, and boardroom engagement.</p>
         <span class="go">executive.ordoanimi.com &#8594;</span>
       </a>
     </div>
@@ -178,6 +185,7 @@ footer{background:var(--ink);border-top:1px solid rgba(250,247,239,0.12)}
     <div class="portrait">
       <svg viewBox="0 0 64 64" aria-hidden="true"><path d="M14 18h36L33 48h-7l9-17H22z" fill="#F2EDE0"/></svg>
       <b>PM</b><span>Phil Myint</span>
+      <img class="portrait-photo" src="/portrait.jpg" alt="Phil Myint" onerror="this.remove()">
     </div>
     <div class="about-body">
       <p class="label">Who I am</p>
