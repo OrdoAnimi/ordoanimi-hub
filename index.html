@@ -10,13 +10,14 @@
 <meta property="og:title" content="OrdoAnimi — Phil Myint">
 <meta property="og:description" content="Writing on enterprise architecture, technology, and the profession — the OrdoAnimi Framework, three books, and the tools built along the way.">
 <meta property="og:url" content="https://www.ordoanimi.com/">
+<meta property="og:image" content="https://www.ordoanimi.com/og-card.png">
 <meta property="og:type" content="website">
 <link rel="icon" type="image/svg+xml" href="/favicon.svg">
 <style>
-@import url('https://fonts.googleapis.com/css2?family=Archivo+Black&family=DM+Mono:wght@400;500&family=DM+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,600&family=DM+Mono:wght@400;500&family=DM+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&display=swap');
 
 :root{
-  --ink:#16231c;
+  --ink:#0b0e11;
   --paper:#faf7ef;
   --page:#f2ede0;
   --surface-2:#ebe4d2;
@@ -24,9 +25,9 @@
   --border-strong:#c9bfa6;
   --body:#3d4536;
   --muted:#5a6354;
-  --gilt:#b58a34;
-  --gilt-deep:#8c6a26;
-  --gilt-light:#ddb35c;
+  --gilt:#b8924e;
+  --gilt-deep:#96753a;
+  --gilt-light:#d4b36a;
 }
 *{margin:0;padding:0;box-sizing:border-box}
 html{scroll-behavior:smooth}
@@ -37,9 +38,9 @@ a:focus-visible,button:focus-visible{outline:3px solid var(--gilt);outline-offse
 .label{font-family:'DM Mono',monospace;font-size:0.75rem;letter-spacing:0.16em;color:var(--gilt-deep);text-transform:none}
 
 /* nav */
-.nav{position:sticky;top:0;z-index:50;background:rgba(22,35,28,0.96);backdrop-filter:blur(10px);border-bottom:1px solid rgba(250,247,239,0.12)}
+.nav{position:sticky;top:0;z-index:50;background:rgba(11,14,17,0.96);backdrop-filter:blur(10px);border-bottom:1px solid rgba(250,247,239,0.12)}
 .nav-in{max-width:1080px;margin:0 auto;padding:0 1.5rem;height:56px;display:flex;align-items:center;justify-content:space-between;gap:1.5rem}
-.nav-brand{font-family:'Archivo Black',sans-serif;font-size:1.15rem;letter-spacing:0.04em;color:var(--paper)}
+.nav-brand{font-family:'Playfair Display',Georgia,serif;font-size:1.15rem;letter-spacing:0.04em;color:var(--paper)}
 .nav-links{display:flex;gap:1.4rem;list-style:none;align-items:center}
 .nav-links a{font-size:0.86rem;color:var(--surface-2)}
 .nav-links a:hover{color:var(--gilt-light);text-decoration:none}
@@ -50,7 +51,7 @@ header{background:var(--ink);color:var(--paper);border-bottom:3px solid var(--gi
 .brand-watermark{position:absolute;right:-4%;top:50%;transform:translateY(-50%);width:38%;max-width:460px;opacity:0.05;pointer-events:none;z-index:0}
 .hero{max-width:1080px;margin:0 auto;padding:6rem 1.5rem 5rem;position:relative;z-index:1}
 .hero .kick{font-family:'DM Mono',monospace;font-size:0.8rem;letter-spacing:0.14em;color:var(--gilt-light);margin-bottom:1.3rem}
-.hero h1{font-family:'Archivo Black',sans-serif;font-size:clamp(2.4rem,6vw,4.4rem);letter-spacing:0.01em;line-height:1.03;color:var(--paper);margin-bottom:1.5rem;max-width:900px}
+.hero h1{font-family:'Playfair Display',Georgia,serif;font-size:clamp(2.4rem,6vw,4.4rem);letter-spacing:0.01em;line-height:1.03;color:var(--paper);margin-bottom:1.5rem;max-width:900px}
 .hero .lead{max-width:640px;font-size:1.15rem;color:var(--surface-2);line-height:1.7}
 .hero .ctas{display:flex;gap:0.8rem;flex-wrap:wrap;margin-top:2.2rem}
 .btn{display:inline-block;padding:0.8rem 1.4rem;border-radius:6px;font-weight:600;font-size:0.95rem;text-decoration:none;transition:background .18s,border-color .18s,color .18s}
@@ -63,15 +64,15 @@ header{background:var(--ink);color:var(--paper);border-bottom:3px solid var(--gi
 section{scroll-margin-top:70px}
 .wrap{max-width:1080px;margin:0 auto;padding:4.5rem 1.5rem}
 .sec-head{max-width:680px;margin-bottom:2.2rem}
-.sec-head h2{font-family:'Archivo Black',sans-serif;font-size:clamp(1.7rem,3.6vw,2.5rem);letter-spacing:0.01em;color:var(--ink);line-height:1.1;margin:0.7rem 0 0.9rem}
+.sec-head h2{font-family:'Playfair Display',Georgia,serif;font-size:clamp(1.7rem,3.6vw,2.5rem);letter-spacing:0.01em;color:var(--ink);line-height:1.1;margin:0.7rem 0 0.9rem}
 .sec-head p{font-size:1.05rem;color:var(--body)}
 
 /* property cards */
 .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:1.1rem}
-.card{background:var(--paper);border:1px solid var(--border);border-radius:8px;padding:1.7rem 1.5rem;display:flex;flex-direction:column;gap:0.55rem;min-height:190px;box-shadow:0 2px 8px rgba(22,35,28,0.05);transition:border-color .18s,transform .18s,box-shadow .18s}
-.card:hover{border-color:var(--gilt);transform:translateY(-2px);box-shadow:0 8px 24px rgba(22,35,28,0.10);text-decoration:none}
+.card{background:var(--paper);border:1px solid var(--border);border-radius:8px;padding:1.7rem 1.5rem;display:flex;flex-direction:column;gap:0.55rem;min-height:190px;box-shadow:0 2px 8px rgba(11,14,17,0.05);transition:border-color .18s,transform .18s,box-shadow .18s}
+.card:hover{border-color:var(--gilt);transform:translateY(-2px);box-shadow:0 8px 24px rgba(11,14,17,0.10);text-decoration:none}
 .card small{font-family:'DM Mono',monospace;font-size:0.72rem;letter-spacing:0.12em;color:var(--gilt-deep)}
-.card h3{font-family:'Archivo Black',sans-serif;font-size:1.2rem;letter-spacing:0.02em;color:var(--ink);line-height:1.2}
+.card h3{font-family:'Playfair Display',Georgia,serif;font-size:1.2rem;letter-spacing:0.02em;color:var(--ink);line-height:1.2}
 .card p{font-size:0.93rem;color:var(--muted);line-height:1.6}
 .card .go{margin-top:auto;font-family:'DM Mono',monospace;font-size:0.76rem;color:var(--gilt-deep)}
 
@@ -80,10 +81,10 @@ section{scroll-margin-top:70px}
 .about-in{max-width:1080px;margin:0 auto;padding:4.5rem 1.5rem;display:grid;grid-template-columns:260px 1fr;gap:3rem;align-items:start}
 .portrait{background:var(--ink);border-radius:10px;aspect-ratio:1/1.2;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:0.6rem;position:relative;overflow:hidden}
 .portrait svg{position:absolute;width:135%;opacity:0.06;left:-18%;top:6%}
-.portrait b{font-family:'Archivo Black',sans-serif;font-size:2.6rem;color:var(--gilt-light);position:relative}
+.portrait b{font-family:'Playfair Display',Georgia,serif;font-size:2.6rem;color:var(--gilt-light);position:relative}
 .portrait span{font-family:'DM Mono',monospace;font-size:0.72rem;letter-spacing:0.08em;color:var(--surface-2);position:relative}
 .portrait-photo{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center 22%;z-index:2}
-.about-body h2{font-family:'Archivo Black',sans-serif;font-size:clamp(1.7rem,3.6vw,2.4rem);color:var(--ink);margin:0.7rem 0 1.1rem}
+.about-body h2{font-family:'Playfair Display',Georgia,serif;font-size:clamp(1.7rem,3.6vw,2.4rem);color:var(--ink);margin:0.7rem 0 1.1rem}
 .about-body p{margin-bottom:1rem;max-width:640px;font-size:1.02rem}
 .about-body p:last-child{margin-bottom:0}
 
@@ -92,21 +93,21 @@ section{scroll-margin-top:70px}
 .book-list{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:1.1rem;margin-top:2rem;counter-reset:book}
 .book{background:var(--paper);border:1px solid var(--border);border-left:4px solid var(--gilt);border-radius:0 8px 8px 0;padding:1.6rem 1.5rem;position:relative}
 .book::before{counter-increment:book;content:counter(book,upper-roman);font-family:'DM Mono',monospace;font-size:0.72rem;letter-spacing:0.1em;color:var(--gilt-deep)}
-.book h3{font-family:'Archivo Black',sans-serif;font-size:1.15rem;color:var(--ink);line-height:1.25;margin:0.5rem 0 0.6rem}
+.book h3{font-family:'Playfair Display',Georgia,serif;font-size:1.15rem;color:var(--ink);line-height:1.25;margin:0.5rem 0 0.6rem}
 .book p{font-size:0.95rem;color:var(--muted);line-height:1.6}
 .books-note{font-family:'DM Mono',monospace;font-size:0.82rem;color:var(--gilt-deep);letter-spacing:0.06em;margin-top:1.8rem}
 
 /* contact */
 .contact{background:var(--ink);color:var(--paper)}
 .contact-in{max-width:1080px;margin:0 auto;padding:4rem 1.5rem;display:flex;justify-content:space-between;align-items:center;gap:2rem;flex-wrap:wrap}
-.contact h2{font-family:'Archivo Black',sans-serif;font-size:clamp(1.6rem,3.2vw,2.2rem);color:var(--paper)}
+.contact h2{font-family:'Playfair Display',Georgia,serif;font-size:clamp(1.6rem,3.2vw,2.2rem);color:var(--paper)}
 .contact p{color:var(--surface-2);font-size:1rem;margin-top:0.5rem;max-width:460px}
 .contact .btn.gold{white-space:nowrap}
 
 /* footer */
 footer{background:var(--ink);border-top:3px solid var(--gilt)}
 .foot{max-width:1080px;margin:0 auto;padding:2.2rem 1.5rem 1.8rem;display:flex;flex-direction:column;gap:1rem;font-size:0.82rem;color:rgba(250,247,239,0.55)}
-.foot .mark{font-family:'Archivo Black',sans-serif;font-size:1.05rem;color:var(--paper)}
+.foot .mark{font-family:'Playfair Display',Georgia,serif;font-size:1.05rem;color:var(--paper)}
 .foot-links{display:flex;gap:1.4rem;flex-wrap:wrap}
 .foot-links a{font-family:'DM Mono',monospace;font-size:0.8rem;letter-spacing:0.06em;color:var(--gilt-light);text-decoration:none}
 .foot-links a:hover{color:var(--paper)}
@@ -130,7 +131,7 @@ footer{background:var(--ink);border-top:3px solid var(--gilt)}
 </nav>
 
 <header>
-  <svg class="brand-watermark" viewBox="0 0 64 64" aria-hidden="true"><text x="32" y="47" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="42" font-weight="700" fill="#F2EDE0">OA</text></svg>
+  <img class="brand-watermark" src="/oa-mark.png" alt="" aria-hidden="true">
   <div class="hero">
     <p class="kick">OrdoAnimi &middot; Phil Myint</p>
     <h1>Experienced architect, author, and occasional vibe coder.</h1>
@@ -187,7 +188,7 @@ footer{background:var(--ink);border-top:3px solid var(--gilt)}
 <section class="about" id="about">
   <div class="about-in">
     <div class="portrait">
-      <svg viewBox="0 0 64 64" aria-hidden="true"><text x="32" y="47" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="42" font-weight="700" fill="#F2EDE0">OA</text></svg>
+      <img src="/oa-mark.png" alt="" aria-hidden="true" style="position:absolute;width:120%;opacity:0.10;left:-10%;top:4%">
       <b>PM</b><span>Phil Myint</span>
       <img class="portrait-photo" src="/portrait.jpg" alt="Phil Myint" onerror="this.remove()">
     </div>
