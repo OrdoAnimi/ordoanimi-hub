@@ -3,15 +3,16 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>OrdoAnimi</title>
-<meta name="description" content="OrdoAnimi &mdash; home of the OrdoAnimi Framework, OrdoAnimi Architecture, Valour&#8482;, and Executive Fast Track.">
+<title>OrdoAnimi — Phil Myint</title>
+<meta name="description" content="OrdoAnimi is where Phil Myint writes about enterprise architecture and the profession — the OrdoAnimi Framework, three books, and the tools built along the way.">
 <link rel="canonical" href="https://www.ordoanimi.com/">
-<meta property="og:title" content="OrdoAnimi">
-<meta property="og:description" content="Home of the OrdoAnimi Framework, OrdoAnimi Architecture, Valour&#8482;, and Executive Fast Track.">
+<meta property="og:title" content="OrdoAnimi — Phil Myint">
+<meta property="og:description" content="Writing on enterprise architecture, technology, and the profession — the OrdoAnimi Framework, three books, and the tools built along the way.">
 <meta property="og:url" content="https://www.ordoanimi.com/">
+<meta property="og:type" content="website">
 <link rel="icon" type="image/svg+xml" href="/favicon.svg">
 <style>
-@import url('https://fonts.googleapis.com/css2?family=Archivo+Black&family=DM+Mono:wght@300;400;500&family=DM+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Archivo+Black&family=DM+Mono:wght@400;500&family=DM+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&display=swap');
 
 :root{
   --ink:#16231c;
@@ -28,78 +29,205 @@
 }
 *{margin:0;padding:0;box-sizing:border-box}
 html{scroll-behavior:smooth}
-body{background:var(--page);color:var(--body);font-family:'DM Sans',sans-serif;font-size:16px;line-height:1.65}
+body{background:var(--page);color:var(--body);font-family:'DM Sans',system-ui,sans-serif;font-size:16px;line-height:1.65}
 a{color:var(--gilt-deep);text-decoration:none}
 a:hover{text-decoration:underline}
+a:focus-visible,button:focus-visible{outline:3px solid var(--gilt);outline-offset:3px}
+.label{font-family:'DM Mono',monospace;font-size:0.75rem;letter-spacing:0.16em;color:var(--gilt-deep);text-transform:none}
 
+/* nav */
+.nav{position:sticky;top:0;z-index:50;background:rgba(22,35,28,0.96);backdrop-filter:blur(10px);border-bottom:1px solid rgba(250,247,239,0.12)}
+.nav-in{max-width:1080px;margin:0 auto;padding:0 1.5rem;height:56px;display:flex;align-items:center;justify-content:space-between;gap:1.5rem}
+.nav-brand{font-family:'Archivo Black',sans-serif;font-size:1.15rem;letter-spacing:0.04em;color:var(--paper)}
+.nav-links{display:flex;gap:1.4rem;list-style:none;align-items:center}
+.nav-links a{font-size:0.86rem;color:var(--surface-2)}
+.nav-links a:hover{color:var(--gilt-light);text-decoration:none}
+@media(max-width:600px){.nav-links{display:none}}
+
+/* hero */
 header{background:var(--ink);color:var(--paper);border-bottom:3px solid var(--gilt);position:relative;overflow:hidden}
 .brand-watermark{position:absolute;right:-4%;top:50%;transform:translateY(-50%);width:38%;max-width:460px;opacity:0.05;pointer-events:none;z-index:0}
-.hero{max-width:1080px;margin:0 auto;padding:6.5rem 1.5rem 5.5rem;position:relative;z-index:1}
-.hero h1{font-family:'Archivo Black',sans-serif;font-size:clamp(3rem,9vw,6.5rem);letter-spacing:0.02em;line-height:0.95;color:var(--paper);margin-bottom:1.4rem}
-.hero h1 span{color:var(--gilt-light)}
-.hero p{max-width:640px;font-size:1.15rem;color:var(--surface-2);line-height:1.7}
+.hero{max-width:1080px;margin:0 auto;padding:6rem 1.5rem 5rem;position:relative;z-index:1}
+.hero .kick{font-family:'DM Mono',monospace;font-size:0.8rem;letter-spacing:0.14em;color:var(--gilt-light);margin-bottom:1.3rem}
+.hero h1{font-family:'Archivo Black',sans-serif;font-size:clamp(2.4rem,6vw,4.4rem);letter-spacing:0.01em;line-height:1.03;color:var(--paper);margin-bottom:1.5rem;max-width:900px}
+.hero .lead{max-width:640px;font-size:1.15rem;color:var(--surface-2);line-height:1.7}
+.hero .ctas{display:flex;gap:0.8rem;flex-wrap:wrap;margin-top:2.2rem}
+.btn{display:inline-block;padding:0.8rem 1.4rem;border-radius:6px;font-weight:600;font-size:0.95rem;text-decoration:none;transition:background .18s,border-color .18s,color .18s}
+.btn.gold{background:var(--gilt);color:var(--ink)}
+.btn.gold:hover{background:var(--gilt-light);text-decoration:none}
+.btn.ghost{border:1px solid rgba(250,247,239,0.35);color:var(--paper)}
+.btn.ghost:hover{border-color:var(--gilt-light);color:var(--gilt-light);text-decoration:none}
 
-main{max-width:1080px;margin:0 auto;padding:4.5rem 1.5rem 5rem}
+/* sections */
+section{scroll-margin-top:70px}
+.wrap{max-width:1080px;margin:0 auto;padding:4.5rem 1.5rem}
+.sec-head{max-width:680px;margin-bottom:2.2rem}
+.sec-head h2{font-family:'Archivo Black',sans-serif;font-size:clamp(1.7rem,3.6vw,2.5rem);letter-spacing:0.01em;color:var(--ink);line-height:1.1;margin:0.7rem 0 0.9rem}
+.sec-head p{font-size:1.05rem;color:var(--body)}
+
+/* property cards */
 .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:1.1rem}
 .card{background:var(--paper);border:1px solid var(--border);border-radius:8px;padding:1.7rem 1.5rem;display:flex;flex-direction:column;gap:0.55rem;min-height:190px;box-shadow:0 2px 8px rgba(22,35,28,0.05);transition:border-color .18s,transform .18s,box-shadow .18s}
 .card:hover{border-color:var(--gilt);transform:translateY(-2px);box-shadow:0 8px 24px rgba(22,35,28,0.10);text-decoration:none}
 .card small{font-family:'DM Mono',monospace;font-size:0.72rem;letter-spacing:0.12em;color:var(--gilt-deep)}
-.card h2{font-family:'Archivo Black',sans-serif;font-size:1.25rem;letter-spacing:0.02em;color:var(--ink);line-height:1.2}
-.card p{font-size:0.94rem;color:var(--muted);line-height:1.6}
-.card .go{margin-top:auto;font-family:'DM Mono',monospace;font-size:0.78rem;color:var(--gilt-deep)}
+.card h3{font-family:'Archivo Black',sans-serif;font-size:1.2rem;letter-spacing:0.02em;color:var(--ink);line-height:1.2}
+.card p{font-size:0.93rem;color:var(--muted);line-height:1.6}
+.card .go{margin-top:auto;font-family:'DM Mono',monospace;font-size:0.76rem;color:var(--gilt-deep)}
 
-footer{border-top:1px solid var(--border);background:var(--surface-2)}
-.foot{max-width:1080px;margin:0 auto;padding:2.2rem 1.5rem;display:flex;justify-content:space-between;align-items:center;gap:1rem;flex-wrap:wrap}
-.foot .mark{font-family:'Archivo Black',sans-serif;font-size:1.05rem;color:var(--ink)}
-.foot p{font-size:0.82rem;color:var(--muted)}
+/* who I am */
+.about{background:var(--surface-2);border-top:1px solid var(--border);border-bottom:1px solid var(--border)}
+.about-in{max-width:1080px;margin:0 auto;padding:4.5rem 1.5rem;display:grid;grid-template-columns:260px 1fr;gap:3rem;align-items:start}
+.portrait{background:var(--ink);border-radius:10px;aspect-ratio:1/1.12;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:0.6rem;position:relative;overflow:hidden}
+.portrait svg{position:absolute;width:135%;opacity:0.06;left:-18%;top:6%}
+.portrait b{font-family:'Archivo Black',sans-serif;font-size:2.6rem;color:var(--gilt-light);position:relative}
+.portrait span{font-family:'DM Mono',monospace;font-size:0.72rem;letter-spacing:0.08em;color:var(--surface-2);position:relative}
+.about-body h2{font-family:'Archivo Black',sans-serif;font-size:clamp(1.7rem,3.6vw,2.4rem);color:var(--ink);margin:0.7rem 0 1.1rem}
+.about-body p{margin-bottom:1rem;max-width:640px;font-size:1.02rem}
+.about-body p:last-child{margin-bottom:0}
 
-@media(max-width:640px){.hero{padding:4.5rem 1.25rem 4rem}main{padding:3rem 1.25rem 3.5rem}}
-@media(prefers-reduced-motion:reduce){.card{transition:none}.card:hover{transform:none}}
+/* books */
+.books-in{max-width:1080px;margin:0 auto;padding:4.5rem 1.5rem}
+.book-list{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:1.1rem;margin-top:2rem;counter-reset:book}
+.book{background:var(--paper);border:1px solid var(--border);border-left:4px solid var(--gilt);border-radius:0 8px 8px 0;padding:1.6rem 1.5rem;position:relative}
+.book::before{counter-increment:book;content:counter(book,upper-roman);font-family:'DM Mono',monospace;font-size:0.72rem;letter-spacing:0.1em;color:var(--gilt-deep)}
+.book h3{font-family:'Archivo Black',sans-serif;font-size:1.15rem;color:var(--ink);line-height:1.25;margin:0.5rem 0 0.6rem}
+.book p{font-size:0.95rem;color:var(--muted);line-height:1.6}
+.books-note{font-family:'DM Mono',monospace;font-size:0.82rem;color:var(--gilt-deep);letter-spacing:0.06em;margin-top:1.8rem}
+
+/* contact */
+.contact{background:var(--ink);color:var(--paper)}
+.contact-in{max-width:1080px;margin:0 auto;padding:4rem 1.5rem;display:flex;justify-content:space-between;align-items:center;gap:2rem;flex-wrap:wrap}
+.contact h2{font-family:'Archivo Black',sans-serif;font-size:clamp(1.6rem,3.2vw,2.2rem);color:var(--paper)}
+.contact p{color:var(--surface-2);font-size:1rem;margin-top:0.5rem;max-width:460px}
+.contact .btn.gold{white-space:nowrap}
+
+/* footer */
+footer{background:var(--ink);border-top:1px solid rgba(250,247,239,0.12)}
+.foot{max-width:1080px;margin:0 auto;padding:1.6rem 1.5rem;display:flex;justify-content:space-between;align-items:center;gap:1rem;flex-wrap:wrap;font-size:0.82rem;color:rgba(250,247,239,0.55)}
+.foot .mark{font-family:'Archivo Black',sans-serif;font-size:1rem;color:var(--paper)}
+
+@media(max-width:680px){.about-in{grid-template-columns:1fr}.portrait{max-width:240px}}
+@media(prefers-reduced-motion:reduce){.card,.card:hover{transition:none;transform:none}}
 </style>
 </head>
 <body>
 
+<nav class="nav">
+  <div class="nav-in">
+    <a class="nav-brand" href="/">OrdoAnimi</a>
+    <ul class="nav-links">
+      <li><a href="https://framework.ordoanimi.com/">Framework</a></li>
+      <li><a href="https://architecture.ordoanimi.com/">Architecture</a></li>
+      <li><a href="#books">Books</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </div>
+</nav>
+
 <header>
   <svg class="brand-watermark" viewBox="0 0 64 64" aria-hidden="true"><path d="M14 18h36L33 48h-7l9-17H22z" fill="#F2EDE0"/></svg>
   <div class="hero">
-    <h1>Ordo<span>Animi</span></h1>
-    <p>Home of the OrdoAnimi Framework, OrdoAnimi Architecture, Valour&#8482;, and Executive Fast Track.</p>
+    <p class="kick">OrdoAnimi &middot; Phil Myint</p>
+    <h1>Experienced architect, author, and occasional vibe coder.</h1>
+    <p class="lead">This is where I write about enterprise architecture, technology, and the profession &mdash; the framework I&rsquo;ve spent three decades shaping, three books, and the tools I build along the way.</p>
+    <div class="ctas">
+      <a class="btn gold" href="https://framework.ordoanimi.com/">Read the framework</a>
+      <a class="btn ghost" href="#books">The books</a>
+    </div>
   </div>
 </header>
 
-<main>
-  <div class="grid">
-    <a class="card" href="https://framework.ordoanimi.com/">
-      <small>Knowledge base</small>
-      <h2>OrdoAnimi Framework</h2>
-      <p>The public knowledge base &mdash; decision-first architecture, research, publications, and practitioner guides.</p>
-      <span class="go">framework.ordoanimi.com &#8594;</span>
-    </a>
-    <a class="card" href="https://architecture.ordoanimi.com/">
-      <small>Practitioner framework</small>
-      <h2>OrdoAnimi Architecture</h2>
-      <p>The solution-architecture practitioner framework. Six modules. Two pillars. One loop.</p>
-      <span class="go">architecture.ordoanimi.com &#8594;</span>
-    </a>
-    <a class="card" href="https://valour.ordoanimi.com/">
-      <small>Product</small>
-      <h2>Valour&#8482;</h2>
-      <p>The boardroom simulator &mdash; pilot console.</p>
-      <span class="go">valour.ordoanimi.com &#8594;</span>
-    </a>
-    <a class="card" href="https://executive.ordoanimi.com/">
-      <small>Program</small>
-      <h2>Executive Fast Track</h2>
-      <p>C-suite fluency, executive translation, and boardroom engagement.</p>
-      <span class="go">executive.ordoanimi.com &#8594;</span>
-    </a>
+<section id="work">
+  <div class="wrap">
+    <div class="sec-head">
+      <p class="label">The work</p>
+      <h2>One body of work, in four places.</h2>
+      <p>The writing, the practitioner method, and the tools that come out of them.</p>
+    </div>
+    <div class="grid">
+      <a class="card" href="https://framework.ordoanimi.com/">
+        <small>Knowledge base</small>
+        <h3>OrdoAnimi Framework</h3>
+        <p>The public knowledge base &mdash; decision-first architecture, the research behind it, and the publications that develop the argument.</p>
+        <span class="go">framework.ordoanimi.com &#8594;</span>
+      </a>
+      <a class="card" href="https://architecture.ordoanimi.com/">
+        <small>Practitioner framework</small>
+        <h3>OrdoAnimi Architecture</h3>
+        <p>The solution-architecture practitioner framework. Six modules. Two pillars. One loop.</p>
+        <span class="go">architecture.ordoanimi.com &#8594;</span>
+      </a>
+      <a class="card" href="https://valour.ordoanimi.com/">
+        <small>Product</small>
+        <h3>Valour&#8482;</h3>
+        <p>The boardroom simulator &mdash; pilot console.</p>
+        <span class="go">valour.ordoanimi.com &#8594;</span>
+      </a>
+      <a class="card" href="https://executive.ordoanimi.com/">
+        <small>Program</small>
+        <h3>Executive Fast Track</h3>
+        <p>C-suite fluency, executive translation, and boardroom engagement.</p>
+        <span class="go">executive.ordoanimi.com &#8594;</span>
+      </a>
+    </div>
   </div>
-</main>
+</section>
+
+<section class="about" id="about">
+  <div class="about-in">
+    <div class="portrait">
+      <svg viewBox="0 0 64 64" aria-hidden="true"><path d="M14 18h36L33 48h-7l9-17H22z" fill="#F2EDE0"/></svg>
+      <b>PM</b><span>Phil Myint</span>
+    </div>
+    <div class="about-body">
+      <p class="label">Who I am</p>
+      <h2>Phil Myint</h2>
+      <p>I learned systems engineering in New Zealand by building systems, sharpened it on London&rsquo;s trading floors &mdash; rooms where slow architecture costs real money by lunchtime &mdash; and now I write from Brisbane.</p>
+      <p>Three decades in, across more than fifty countries, I&rsquo;ve seen most of the ways architecture fails and a few of the ways it wins. OrdoAnimi is where I write it down: the framework, the books, and the odd thing I build when an idea needs a working model more than another paragraph.</p>
+      <p>Architect by trade, author by habit, vibe coder when the mood takes me.</p>
+    </div>
+  </div>
+</section>
+
+<section id="books">
+  <div class="books-in">
+    <div class="sec-head">
+      <p class="label">The books</p>
+      <h2>A complete series of three.</h2>
+      <p>Written and complete &mdash; publishing on Amazon, Q4 2026.</p>
+    </div>
+    <div class="book-list">
+      <div class="book">
+        <h3>Where Architecture Truly Creates Value</h3>
+        <p>The complete case for decision-first architecture &mdash; why the unit of architecture is the decision, and what that changes.</p>
+      </div>
+      <div class="book">
+        <h3>Reading the Map</h3>
+        <p>A beginner&rsquo;s guide to enterprise architecture &mdash; the on-ramp for practitioners and leaders entering the discipline.</p>
+      </div>
+      <div class="book">
+        <h3>Holding the Line</h3>
+        <p>On leadership &mdash; the conviction to create clarity, extend trust, own the decision, protect people, and prepare others to lead without you.</p>
+      </div>
+    </div>
+    <p class="books-note">Three volumes &middot; one argument, from the method to the profession to the person.</p>
+  </div>
+</section>
+
+<section class="contact" id="contact">
+  <div class="contact-in">
+    <div>
+      <h2>Get in touch.</h2>
+      <p>One inbox, and it reaches me directly. For conversation, writing, and speaking.</p>
+    </div>
+    <a class="btn gold" href="mailto:informatio@ordoanimi.com">informatio@ordoanimi.com</a>
+  </div>
+</section>
 
 <footer>
   <div class="foot">
     <span class="mark">OrdoAnimi</span>
-    <p>&copy; 2026 OrdoAnimi</p>
+    <span>&copy; 2026 OrdoAnimi &middot; Phil Myint &middot; Brisbane, Australia</span>
   </div>
 </footer>
 
