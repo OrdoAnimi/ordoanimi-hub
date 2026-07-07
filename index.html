@@ -17,17 +17,17 @@
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,600&family=DM+Mono:wght@400;500&family=DM+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&display=swap');
 
 :root{
-  --ink:#0b0e11;
-  --paper:#faf7ef;
+  --ink:#0f1115;
+  --paper:#f7f5f2;
   --page:#f2ede0;
   --surface-2:#ebe4d2;
   --border:#ded7c4;
   --border-strong:#c9bfa6;
   --body:#3d4536;
   --muted:#5a6354;
-  --gilt:#b8924e;
-  --gilt-deep:#96753a;
-  --gilt-light:#d4b36a;
+  --gilt:#b59652;
+  --gilt-deep:#8c7038;
+  --gilt-light:#cdae72;
 }
 *{margin:0;padding:0;box-sizing:border-box}
 html{scroll-behavior:smooth}
@@ -38,7 +38,7 @@ a:focus-visible,button:focus-visible{outline:3px solid var(--gilt);outline-offse
 .label{font-family:'DM Mono',monospace;font-size:0.75rem;letter-spacing:0.16em;color:var(--gilt-deep);text-transform:none}
 
 /* nav */
-.nav{position:sticky;top:0;z-index:50;background:rgba(11,14,17,0.96);backdrop-filter:blur(10px);border-bottom:1px solid rgba(250,247,239,0.12)}
+.nav{position:sticky;top:0;z-index:50;background:rgba(15,17,21,0.96);backdrop-filter:blur(10px);border-bottom:1px solid rgba(250,247,239,0.12)}
 .nav-in{max-width:1080px;margin:0 auto;padding:0 1.5rem;height:56px;display:flex;align-items:center;justify-content:space-between;gap:1.5rem}
 .nav-brand{font-family:'Playfair Display',Georgia,serif;font-size:1.15rem;letter-spacing:0.04em;color:var(--paper)}
 .nav-links{display:flex;gap:1.4rem;list-style:none;align-items:center}
@@ -69,8 +69,8 @@ section{scroll-margin-top:70px}
 
 /* property cards */
 .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:1.1rem}
-.card{background:var(--paper);border:1px solid var(--border);border-radius:8px;padding:1.7rem 1.5rem;display:flex;flex-direction:column;gap:0.55rem;min-height:190px;box-shadow:0 2px 8px rgba(11,14,17,0.05);transition:border-color .18s,transform .18s,box-shadow .18s}
-.card:hover{border-color:var(--gilt);transform:translateY(-2px);box-shadow:0 8px 24px rgba(11,14,17,0.10);text-decoration:none}
+.card{background:var(--paper);border:1px solid var(--border);border-radius:8px;padding:1.7rem 1.5rem;display:flex;flex-direction:column;gap:0.55rem;min-height:190px;box-shadow:0 2px 8px rgba(15,17,21,0.05);transition:border-color .18s,transform .18s,box-shadow .18s}
+.card:hover{border-color:var(--gilt);transform:translateY(-2px);box-shadow:0 8px 24px rgba(15,17,21,0.10);text-decoration:none}
 .card small{font-family:'DM Mono',monospace;font-size:0.72rem;letter-spacing:0.12em;color:var(--gilt-deep)}
 .card h3{font-family:'Playfair Display',Georgia,serif;font-size:1.2rem;letter-spacing:0.02em;color:var(--ink);line-height:1.2}
 .card p{font-size:0.93rem;color:var(--muted);line-height:1.6}
@@ -116,14 +116,8 @@ footer{background:var(--ink);border-top:3px solid var(--gilt)}
 @media(prefers-reduced-motion:reduce){.card,.card:hover{transition:none;transform:none}}
 
 /* brand banner cover */
-.cover{position:relative;background:var(--ink);overflow:hidden;border-bottom:1px solid rgba(212,179,106,0.18)}
-.cover::before{content:'';position:absolute;inset:0;background:url('/assets/hero-building.jpg') right center/cover no-repeat;opacity:0.5;-webkit-mask-image:linear-gradient(90deg,transparent 0%,transparent 45%,#000 100%);mask-image:linear-gradient(90deg,transparent 0%,transparent 45%,#000 100%)}
-.cover::after{content:'';position:absolute;left:0;top:0;bottom:0;width:34%;background:url('/assets/hero-lines.png') left center/cover no-repeat;opacity:0.13;pointer-events:none}
-.cover-in{position:relative;z-index:1;max-width:1080px;margin:0 auto;padding:2.4rem 1.5rem;display:flex;flex-direction:column;align-items:center;text-align:center;gap:0.4rem}
-.cover-logo{height:120px;max-width:90%;object-fit:contain}
-.cover-tag{font-family:'DM Mono',monospace;font-size:0.78rem;letter-spacing:0.22em;color:var(--gilt-light);margin-top:0.3rem}
-.cover-place{font-family:'DM Mono',monospace;font-size:0.7rem;letter-spacing:0.2em;color:rgba(235,228,210,0.55)}
-@media(max-width:560px){.cover-logo{height:96px}.cover-tag{font-size:0.66rem;letter-spacing:0.14em}}
+.cover{background:#0f1115;line-height:0}
+.cover img{display:block;width:100%;max-width:1983px;margin:0 auto;height:auto}
 /* availability chip + hero role */
 .avail{display:inline-flex;align-items:center;gap:0.5rem;font-family:'DM Mono',monospace;font-size:0.78rem;letter-spacing:0.05em;color:var(--gilt-light);border:1px solid rgba(212,179,106,0.4);border-radius:999px;padding:0.4rem 0.9rem;margin-bottom:1.4rem}
 .avail .dot{width:7px;height:7px;border-radius:50%;background:#5fbf7a;box-shadow:0 0 0 3px rgba(95,191,122,0.25)}
@@ -133,7 +127,7 @@ footer{background:var(--ink);border-top:3px solid var(--gilt)}
 .principal a{color:var(--gilt-light)}
 .principal a:hover{color:var(--paper)}
 /* stat band */
-.stats{background:#07090b;border-bottom:1px solid rgba(250,247,239,0.08)}
+.stats{background:#0a0c0f;border-bottom:1px solid rgba(250,247,239,0.08)}
 .stats-in{max-width:1080px;margin:0 auto;padding:2.2rem 1.5rem;display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:1.5rem}
 .stat b{display:block;font-family:'Playfair Display',serif;font-size:2rem;font-weight:600;color:var(--gilt-light);font-variant-numeric:tabular-nums;line-height:1}
 .stat span{display:block;font-family:'DM Mono',monospace;font-size:0.72rem;letter-spacing:0.06em;color:rgba(235,228,210,0.7);margin-top:0.5rem}
@@ -164,11 +158,7 @@ footer{background:var(--ink);border-top:3px solid var(--gilt)}
 </nav>
 
 <section class="cover" aria-label="Ordo Animi">
-  <div class="cover-in">
-    <img class="cover-logo" src="/assets/Primary_Logo.png" alt="Ordo Animi — Enterprise Architecture, AI Governance, Technology Strategy">
-    <p class="cover-tag">Clarity. Governance. Execution.</p>
-    <p class="cover-place">Brisbane &middot; Global</p>
-  </div>
+  <img src="/assets/banner.jpg" alt="Ordo Animi &mdash; Enterprise Architecture, AI Governance, Technology Strategy. Clarity. Governance. Execution. Brisbane &middot; Global." width="1983" height="793">
 </section>
 
 <header>
