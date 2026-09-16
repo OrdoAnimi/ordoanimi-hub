@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Phil Myint &mdash; Résumé | Principal Solution Architect</title>
+<meta name="description" content="Résumé of Phil Myint — Principal Solution Architect & Design Authority. Enterprise and infrastructure architecture across government, financial services, mining, energy and enterprise technology. Available immediately.">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://www.ordoanimi.com/resume">
+<link rel="icon" type="image/svg+xml" href="/favicon.svg">
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,600&family=DM+Mono:wght@400;500&family=DM+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&display=swap');
+
+:root{
+  --ink:#0b0e11; --body:#3d4536; --muted:#5a6354;
+  --gold:#b8924e; --gold-deep:#96753a; --gold-light:#d4b36a;
+  --paper:#faf7ef; --rule:#ded7c4; --rule-strong:#c9bfa6;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+body{background:#ece7dc;color:var(--body);font-family:'DM Sans',system-ui,sans-serif;font-size:13.5px;line-height:1.5;-webkit-print-color-adjust:exact;print-color-adjust:exact}
+a{color:var(--gold-deep);text-decoration:none}
+
+.toolbar{position:sticky;top:0;z-index:10;background:var(--ink);display:flex;justify-content:space-between;align-items:center;gap:1rem;padding:0.7rem 1.2rem;flex-wrap:wrap}
+.toolbar a,.toolbar button{font-family:'DM Mono',monospace;font-size:0.78rem;letter-spacing:0.04em;cursor:pointer}
+.toolbar .back{color:var(--gold-light)}
+.toolbar .print{background:var(--gold);color:var(--ink);border:none;padding:0.5rem 1rem;border-radius:5px;font-weight:500}
+.toolbar .print:hover{background:var(--gold-light)}
+
+.sheet{max-width:840px;margin:1.5rem auto;background:var(--paper);box-shadow:0 6px 30px rgba(15,17,21,0.14);padding:42px 50px 46px}
+
+/* header */
+.rhead{display:grid;grid-template-columns:1fr auto;gap:1.5rem;border-bottom:2px solid var(--ink);padding-bottom:16px;margin-bottom:16px}
+.rhead .name{font-family:'Playfair Display',Georgia,serif;font-size:32px;font-weight:700;letter-spacing:0.01em;color:var(--ink);line-height:1}
+.rhead .title{font-family:'DM Mono',monospace;font-size:11.5px;letter-spacing:0.04em;color:var(--gold-deep);margin-top:7px;text-transform:uppercase}
+.rhead .title .nb{white-space:nowrap}
+.rhead .contact{text-align:right;font-size:11.5px;color:var(--muted);line-height:1.7}
+.rhead .contact a{color:var(--ink);font-weight:500}
+.rhead .contact .avail{display:inline-block;margin-top:5px;font-family:'DM Mono',monospace;font-size:10px;letter-spacing:0.04em;color:var(--gold-deep);border:1px solid var(--rule-strong);border-radius:4px;padding:2px 7px}
+@media(max-width:640px){.rhead{grid-template-columns:1fr}.rhead .contact{text-align:left}}
+
+.sec{margin-top:18px}
+.sec > h2{font-family:'DM Mono',monospace;font-size:10.5px;letter-spacing:0.2em;text-transform:uppercase;color:var(--gold-deep);padding-bottom:4px;border-bottom:1px solid var(--rule);margin-bottom:10px}
+.summary p{font-size:12.8px;line-height:1.55;margin-bottom:8px;color:var(--body)}
+.summary strong{color:var(--ink)}
+.summary .accent{color:var(--gold-deep);font-weight:500}
+
+/* competencies */
+.comp{display:grid;grid-template-columns:repeat(3,1fr);gap:3px 1.6rem;font-size:11.8px}
+.comp span{position:relative;padding-left:13px;padding-top:2px;padding-bottom:2px;color:var(--body)}
+.comp span::before{content:'▸';position:absolute;left:0;color:var(--gold);font-size:10px}
+@media(max-width:640px){.comp{grid-template-columns:1fr 1fr}}
+
+/* achievements */
+.ach{list-style:none}
+.ach li{position:relative;padding-left:15px;font-size:12.4px;line-height:1.45;margin-bottom:5px}
+.ach li::before{content:'';position:absolute;left:0;top:6px;width:5px;height:5px;background:var(--gold);border-radius:1px}
+.ach li b{color:var(--ink);font-weight:600}
+
+/* experience */
+.job{margin-bottom:14px;break-inside:avoid}
+.job-head{display:flex;justify-content:space-between;align-items:baseline;gap:1rem;flex-wrap:wrap}
+.job-role{font-family:'Playfair Display',serif;font-size:15px;font-weight:600;color:var(--ink)}
+.job-dates{font-family:'DM Mono',monospace;font-size:10.5px;color:var(--muted);white-space:nowrap}
+.job-org{font-size:12px;font-weight:600;color:var(--body);margin-top:1px}
+.job-intro{font-size:12px;font-style:italic;color:var(--muted);margin:5px 0}
+.job ul{list-style:none;margin:5px 0 0}
+.job li{position:relative;padding-left:15px;font-size:12.3px;line-height:1.45;margin-bottom:4px;color:var(--body)}
+.job li::before{content:'';position:absolute;left:0;top:6px;width:5px;height:5px;background:var(--gold);border-radius:1px}
+.job li b{color:var(--ink);font-weight:600}
+
+.plain{font-size:12.5px;line-height:1.65;color:var(--body);margin-bottom:6px}
+.plain b{color:var(--ink)}
+.refs .ref{margin-bottom:9px;font-size:12px}
+.refs .ref .who{font-weight:600;color:var(--ink)}
+.refs .ref .quote{font-style:italic;color:var(--muted);margin-top:2px}
+.refs .avail{font-size:11.5px;color:var(--muted);font-style:italic;margin-top:4px}
+
+.rfoot{margin-top:20px;padding-top:10px;border-top:1px solid var(--rule);font-family:'DM Mono',monospace;font-size:9.5px;letter-spacing:0.1em;color:var(--muted);display:flex;justify-content:space-between;flex-wrap:wrap;gap:0.5rem}
+
+@media(max-width:640px){.sheet{padding:26px 20px}.rhead .name{font-size:26px}}
+
+@media print{
+  body{background:#fff}
+  .toolbar{display:none}
+  .sheet{box-shadow:none;margin:0;max-width:none;padding:0}
+  @page{size:A4;margin:12mm 14mm}
+  .job,.sec,.refs .ref{break-inside:avoid}
+  a{color:var(--ink)}
+}
+</style>
+</head>
+<body>
+
+<div class="toolbar">
+  <a class="back" href="/">&larr; ordoanimi.com</a>
+  <button class="print" onclick="window.print()">Print / Save as PDF</button>
+</div>
+
+<div class="sheet">
+  <header class="rhead">
+    <div>
+      <div class="name">Phil Myint</div>
+      <div class="title"><span class="nb">Principal Solution Architect</span> &middot; <span class="nb">Design Authority</span> &middot; <span class="nb">Enterprise & Infrastructure Architecture</span></div>
+    </div>
+    <div class="contact">
+      <a href="mailto:phillip.myint@outlook.com">phillip.myint@outlook.com</a><br>
+      0481 384 977<br>
+      <a href="https://www.linkedin.com/in/pmyint">linkedin.com/in/pmyint</a><br>
+      Brisbane, QLD &middot; NZ Passport &middot; Full AU Work Rights<br>
+      Open to Work Across Australia as Required<br>
+      <span class="avail">Available Immediately</span>
+    </div>
+  </header>
+
+  <section class="sec summary">
+    <p>Principal Solution Architect and Design Authority with 30+ years governing complex architectural decisions across Queensland Government portfolio delivery, global M&A programs, regulated financial services, and mining and energy enterprise &mdash; including years based in Kuala Lumpur leading global delivery for ABB Enterprise Software across APAC, EMEA and North America. Consistently functions as the senior architectural authority, primary escalation point, and operating model steward across complex programs, independent of formal title.</p>
+    <p>Takes fragmented, ambiguous or at-risk programs and brings architectural clarity &mdash; defining the solution, setting the standards, governing delivery, and staying in the room until it is built. Works directly with CIOs and SVPs to shape technology roadmaps, presents them to Boards and Architecture Review Boards, and drives them to outcomes. <strong>Owns the outcome, not just the design.</strong></p>
+    <p class="accent">Angel Investor & Technical Advisor, Func Ventures (2023&ndash;Present).</p>
+  </section>
+
+  <section class="sec">
+    <h2>Career Achievements</h2>
+    <ul class="ach">
+      <li><b>Azure archive unification (TMR, 2025):</b> designed a unified Azure Blob Storage tiering architecture (Hot/Cool/Archive) with ServiceNow-driven rehydration workflows across three previously siloed legacy-decommissioning workstreams, cutting archived-record retrieval time from weeks to under 24 hours while meeting Queensland Government records-retention and WORM compliance requirements.</li>
+      <li><b>Security incident response (TMR, 2025):</b> led a strategic security consultation following a confirmed data-scraping exploit on a public vehicle-registration service, delivering an AWS Well-Architected-aligned remediation roadmap and directing a 5-level Identity Authentication Assurance (IAAL) uplift program across all unauthenticated public-facing services.</li>
+      <li><b>Procurement governance save (TMR, 2025):</b> produced a critical governance review of a multi-million-dollar IBM Cognos/DataStage cloud modernisation program, identifying project-maturity gaps that redirected a premature $500K+ Solution Architecture Document request into a properly scoped procurement engagement.</li>
+      <li><b>Web content filtering procurement (DOE, 2023):</b> served as WCF Solution Architect on the SME evaluation panel for a statewide Web Content Filtering procurement covering ~600,000 students and 1,258 schools &mdash; co-authored the pilot viability analysis that narrowed 4 shortlisted NGFW vendor pilots to 2, cutting projected pilot cost by roughly 50% and timeline by up to 22 weeks.</li>
+      <li><b>25M seats</b> &mdash; architected Symantec Web Site Security platform expansion from 4M to 25M seats through 15 new hyper-converged edge locations across Europe, USA and Asia Pacific, supporting revenues in excess of US$100M per annum.</li>
+      <li><b>20 data centres decommissioned</b> &mdash; implemented the global data centre consolidation program alongside the Program Director, delivering over US$30M per annum in recurring savings.</li>
+      <li><b>1,750 developers integrated</b> &mdash; architected the Azure secure development environment post-acquisition, retiring $12M p.a. in legacy infrastructure as part of the Symantec/Blue Coat M&A integration.</li>
+      <li><b>17 of the top 20 global mining groups</b> &mdash; architectural authority for managed services delivery across Mincom/ABB&rsquo;s Tier 1 client base on the Ellipse EAM platform, spanning six countries and 100+ customers.</li>
+      <li><b>1,300+ numbers ported</b> &mdash; led decommissioning of a Telstra-hosted Cisco PBX and migration to Microsoft Teams Voice across all six campuses of a Victorian TAFE, with zero service disruption.</li>
+      <li><b>Zero disruption</b> &mdash; architected Exchange and SharePoint to Microsoft 365 migration for 2,000 users across a live global operation.</li>
+      <li><b>25%+ cost reduction</b> &mdash; rationalised Azure Monitor architecture across a large managed services estate, improving signal quality and reducing operational noise.</li>
+    </ul>
+  </section>
+
+  <section class="sec">
+    <h2>Core Competencies</h2>
+    <div class="comp">
+      <span>Solution & Enterprise Architecture</span>
+      <span>Design Authority & Architecture Review Boards</span>
+      <span>TOGAF 9.2</span>
+      <span>QGEA, DIS & Whole-of-Government Frameworks</span>
+      <span>Infrastructure Architecture</span>
+      <span>Data Centre Design, Consolidation & Relocation</span>
+      <span>Networks, Wireless & SD-WAN</span>
+      <span>Telephony, Unified Communications & Teams Voice</span>
+      <span>Audio-Visual & Collaboration Technologies</span>
+      <span>End User Computing</span>
+      <span>Server & Storage Platforms</span>
+      <span>Structured Cabling & Facility Infrastructure</span>
+      <span>Cloud Architecture (Azure, AWS, GCP)</span>
+      <span>Microsoft 365 & Power Platform</span>
+      <span>Data Architecture, Migration & Retention</span>
+      <span>Cybersecurity Architecture (SABSA, ISO 27001, ISM, E8)</span>
+      <span>Legacy Decommissioning & Modernisation</span>
+      <span>Multi-Vendor & System Integrator Governance</span>
+      <span>ADRs & Investment-Grade Artefacts</span>
+      <span>Executive, Board & C-Suite Engagement</span>
+      <span>Presales & Solution Consulting</span>
+      <span>FinOps & Managed Services</span>
+      <span>ITIL, PRINCE2, Agile Delivery</span>
+    </div>
+  </section>
+
+  <section class="sec">
+    <h2>Professional Experience</h2>
+
+    <div class="job">
+      <div class="job-head"><span class="job-role">Founder & Principal Consultant</span><span class="job-dates">2015 &ndash; Present</span></div>
+      <div class="job-org">Ordo Animi &middot; Brisbane, QLD</div>
+      <p class="job-intro">Independent consulting practice (ABN/GST registered). Engaged directly by government agencies and enterprise clients as Principal Solution Architect and Design Authority &mdash; defining target-state architectures, governing complex multi-vendor programs, leading architecture review bodies, and owning architectural outcomes through to production. From 2025, expanded into a public-facing practice: authoring a decision-first architecture framework and practitioner method, and a book codifying 30 years of delivery experience, while completing Anthropic's Claude Code and Claude 101 certification programs.</p>
+      <ul>
+        <li><b>Queensland Department of Education (2023):</b> served as WCF Solution Architect on the SME evaluation panel for a statewide Web Content Filtering procurement (QED115370, ~600,000 students, 1,258 schools) &mdash; co-authored the pilot viability analysis narrowing 4 shortlisted NGFW vendor pilots (Fortinet, Palo Alto) to 2, cutting projected pilot cost by roughly 50% and timeline by up to 22 weeks; also authored the pilot test strategy and vendor briefing materials. Reviewed and refined earlier MIIS/MIS 2.0 architecture and IAM documentation feeding into this procurement, and defined ServiceNow onboarding requirements for the successor filtering service. Separately led architecture and governance input for the department's wider cybersecurity and network security uplift, aligned to QGEA, ISM and Essential Eight.</li>
+        <li><b>Amart Furniture (2022, national retail group, 65+ stores):</b> led solution architecture for an ERP and supply chain systems uplift, aligning procurement, logistics and warehouse operations to investment decisions; designed data warehouse architecture for logistics and warehouse management; established enterprise architecture foundations &mdash; governance frameworks, reference architectures, principles and standards.</li>
+      </ul>
+    </div>
+
+    <div class="job">
+      <div class="job-head"><span class="job-role">Senior Architect (AO8)</span><span class="job-dates">2024 &ndash; 2025</span></div>
+      <div class="job-org">Queensland Dept of Transport & Main Roads &middot; Brisbane, QLD</div>
+      <p class="job-intro">Full-time engagement as senior architect and de facto Design Authority across a major portfolio of legacy modernisation, security, data and compliance programs within Strategy & Architecture, Information Technology Branch. Produced Strategy and Architecture Documents and initiative assessments presented through DAWG and SAG executive governance forums.</p>
+      <ul>
+        <li><b>Legacy Notes decommissioning (NFTM program):</b> served as Chief Architect for a program-level Lotus Notes decommissioning initiative, designing a unified Azure/Power Platform architecture that consolidated three legacy-modernisation streams (Corporate Forms, Customer Feedback Register, and Multi-Tier Archive) to retire an unsupported IBM Notes/Domino environment.</li>
+        <li><b>Azure archive unification:</b> designed and delivered a unified Azure Blob Storage tiering architecture (Hot/Cool/Archive) with ServiceNow-driven rehydration workflows across three previously siloed legacy-decommissioning workstreams, cutting archived-record retrieval time from weeks to under 24 hours; the solution architecture was formally closed out with a documented 30-day handover plan.</li>
+        <li><b>CheckRego security incident response:</b> led a strategic security consultation following a confirmed data-scraping exploit on the public vehicle-registration service, delivering an AWS Well-Architected-aligned remediation roadmap (API Gateway rate limiting, certificate-based mobile authentication, GuardDuty/CloudTrail monitoring, VIN/plate data masking) mapped to IS18:2018, QGEA and QGISCF.</li>
+        <li><b>IAAL security uplift program:</b> directed a follow-on program designing a 5-level Identity Authentication Assurance (IAAL) roadmap across all unauthenticated public-facing services, briefing agency leadership on a phased 6&ndash;12 month rollout.</li>
+        <li><b>Cognos/DataStage modernisation governance:</b> produced conceptual solution architecture and a critical governance review for the IBM Cognos/DataStage cloud modernisation program, identifying project-maturity gaps (no assigned PM, missing SLAs/DR planning) that redirected a premature $500K+ Solution Architecture Document request into a properly scoped procurement engagement; also authored the conceptual architecture for a hybrid DataStage-as-a-Service (DSaaS Anywhere) migration model.</li>
+        <li><b>AddInsight ITO (Intelligent Transport Systems procurement):</b> authored the functional/technical requirements and milestone framework for a cloud-based traffic-intelligence platform procurement, defining measurable uptime and API-latency SLAs and real-time multi-source sensor ingestion requirements for a statewide traffic-intelligence platform replacement.</li>
+        <li><b>Noosa River Anchoring Permit System:</b> conducted the initiative architecture review and endorsement for a new Power Platform-based permit system integrating with TRAILS/TDx and the Maritime Safety Intelligence Database, clearing the initiative to proceed to Proof of Concept.</li>
+        <li><b>Fieldwize/iTRACS:</b> authored the conceptual solution architecture to replace a legacy Smallworld PNI fibre-asset database with a modern Fieldwize/iTRACS platform, and ran a 2-week strategic consultation resolving hosting, identity, and data-sovereignty requirements for a separate Fieldwize field-data-capture platform renewal &mdash; producing a vendor-confirmed architecture that kept all infrastructure and data under TMR control.</li>
+        <li><b>ConVue / Mt Whitestone landslide monitoring:</b> reviewed the architecture and governance posture of a safety-critical landslide early-warning system (in continuous service since 2014) ahead of vendor contract renewal, clarifying identity, hosting and audit-retention requirements for road-closure decision support.</li>
+        <li><b>HoleBase to OpenGround:</b> advised on the strategic transition of the legacy HoleBase geotechnical data platform to Bentley's OpenGround SaaS, scoping data-migration and security-classification blockers ahead of formal architecture design.</li>
+        <li><b>SAP S/4HANA migration:</b> represented Information Technology Branch in a cross-branch RACI model for the SAP S/4HANA/AWS migration, defining the technology work package, architectural risk register, and effort estimates for executive sign-off.</li>
+        <li><b>Dataiku GenAI chatbot PoC:</b> performed the governance and security architecture review for a GenAI chatbot proof of concept enabling natural-language KPI queries for executives (projected to save roughly two days per ad-hoc analytics request), defining the compliance pathway to production.</li>
+        <li><b>Entra ID authentication pattern:</b> authored a prescriptive Entra ID authentication pattern (OIDC/SAML, MFA, B2B federation) adopted as the standard identity-integration reference for subsequent third-party SaaS vendor architecture reviews (Fieldwize, ConVue).</li>
+        <li>Established and ran a one-person Enterprise Architecture Centre of Excellence, publishing governance positions and reusable architecture patterns for agentic AI adopted across subsequent PoC governance reviews.</li>
+        <li>Took over technical lead on multiple stalled vendor platform integrations (Cognos, DataStage, F5, Dataiku, Fieldwize Optical), each three to six months behind schedule, closing several within six months.</li>
+      </ul>
+    </div>
+
+    <div class="job">
+      <div class="job-head"><span class="job-role">Technical Service Delivery Manager</span><span class="job-dates">2024</span></div>
+      <div class="job-org">Idea11 &mdash; Boutique AWS Managed Service Provider &middot; Brisbane, QLD</div>
+      <ul>
+        <li>Managed strategic customer relationships across government, education, mining and utilities sectors, maintaining 90%+ satisfaction and retention.</li>
+        <li>Led executive customer engagement and trusted-advisor activities, including solution development and pre-sales participation.</li>
+        <li>Directed service governance, operational leadership and customer success management across multiple concurrent engagements; held commercial service accountability, SLA compliance and 24/7 operational performance management.</li>
+      </ul>
+    </div>
+
+    <div class="job">
+      <div class="job-head"><span class="job-role">Lead Consulting Architect</span><span class="job-dates">2020 &ndash; 2022</span></div>
+      <div class="job-org">Planet6 &mdash; Technology Services Provider (Microsoft Practice) &middot; Brisbane, QLD</div>
+      <ul>
+        <li><b>Chisholm Institute (Victorian TAFE &mdash; six campuses, ~1,200 staff, ~26,000 students):</b> designed and governed full decommissioning of the Telstra-hosted Cisco PBX and migration to Microsoft Teams Voice across all six campuses &mdash; 1,300+ numbers ported with zero service disruption, including all call workflow design; led the supporting multi-campus network upgrade underpinning the voice and collaboration platform.</li>
+        <li>Architected audio-visual and collaboration technology deployment across teaching and meeting spaces &mdash; working directly with AV, Telstra, Cisco and third-party vendors on design, integration and delivery.</li>
+        <li>Delivered Microsoft 365, SharePoint Online and Microsoft Purview architecture &mdash; information architecture, records management, metadata frameworks, data classification and compliance alignment.</li>
+        <li>Led Active Directory to Entra ID migration and Microsoft 365 architecture for a national retail client.</li>
+        <li>Rationalised Azure Monitor architecture across a large managed services estate &mdash; 25%+ cost reduction and materially improved signal quality.</li>
+      </ul>
+    </div>
+
+    <div class="job">
+      <div class="job-head"><span class="job-role">Career Sabbatical &mdash; Technical Dive Master & Rescue Diver</span><span class="job-dates">2019 &ndash; 2020</span></div>
+      <div class="job-org">Deliberate recalibration</div>
+    </div>
+
+    <div class="job">
+      <div class="job-head"><span class="job-role">Global Solution Architect & Design Authority</span><span class="job-dates">2016 &ndash; 2019</span></div>
+      <div class="job-org">Blue Coat Systems / Symantec (Broadcom) &mdash; NASDAQ-Listed &middot; Global &middot; 4 Continents</div>
+      <ul>
+        <li>Held global Design Authority for cloud transformation and infrastructure consolidation &mdash; governing multi-vendor architecture and delivery across 50+ sites and 14 data centres on four continents.</li>
+        <li>Architected the Web Site Security platform expansion into hyper-converged edge locations across Europe, USA, Australia and New Zealand &mdash; scaling from 4M to 25M seats, supporting revenue in excess of US$100M per annum. (Confirmed at SVP IT and Program Director level.)</li>
+        <li>Architected post-acquisition COTS platform consolidation &mdash; retiring $12M p.a. in legacy infrastructure and integrating 1,750 developers into a secure Azure development environment. (Confirmed at Program Director level.)</li>
+        <li>Delivered zero-disruption Microsoft 365 migration for 2,000 users across live global operations.</li>
+        <li>Led SOC2 and ISO 27001 compliance program &mdash; executive stakeholder engagement, external audit coordination and security governance across a regulated global environment.</li>
+        <li>Governed global office IT infrastructure standardisation and regional lab optimisation, contributing to over US$30M per annum in recurring savings via a 20-data-centre consolidation program.</li>
+      </ul>
+    </div>
+
+    <div class="job">
+      <div class="job-head"><span class="job-role">Global Lead Solutions Architect & Delivery Manager</span><span class="job-dates">2010 &ndash; 2015</span></div>
+      <div class="job-org">Mincom / Ventyx / ABB Enterprise Software &middot; Kuala Lumpur, Malaysia + Atlanta, USA + Global</div>
+      <ul>
+        <li>Joined as Senior Systems Engineer and progressed through five roles across two successive acquisitions to Global Lead Solutions Architect &mdash; senior architect to the SVP of Managed Services.</li>
+        <li>Based in Kuala Lumpur, governed global delivery across the transformation of Mincom's managed services into a Global Shared Services business unit &mdash; operations across Australia, Malaysia, South Africa, UK, Chile and the US, serving 100+ customers including 17 of the top 20 global mining groups.</li>
+        <li>Led global architecture and delivery teams of up to 40 people across three continents.</li>
+        <li>Delivered significant FinOps and infrastructure rationalisation outcomes via AWS and Azure migration programs across the managed services estate.</li>
+        <li>Deployed to Atlanta, USA to lead integration of the North American services team into the global service delivery model following ABB's acquisition of Ventyx.</li>
+      </ul>
+    </div>
+
+    <div class="job">
+      <div class="job-head"><span class="job-role">Earlier Career</span><span class="job-dates">1994 &ndash; 2008</span></div>
+      <div class="job-org">New Zealand, Australia, United Kingdom</div>
+      <ul>
+        <li><b>Lead Systems Engineer</b> &mdash; Fronde (acquired by Datacom), Wellington NZ (2008&ndash;2010): NZ Parliament, EMS Trading (Transport NZ), NZ Trade and Enterprise.</li>
+        <li><b>Technical Lead, Banking & Trading Systems</b> &mdash; FNZ New Zealand, Wellington NZ (2005&ndash;2008): FNZ now manages over US$2 trillion in assets for 650+ financial institutions.</li>
+        <li><b>Lead Systems Engineer, Financial Services & Government</b> &mdash; City of London, UK (1999&ndash;2005): Deutsche Bank, HSBC, Allen & Overy, Saudi International Bank, UK Strategic Rail Authority.</li>
+        <li><b>Technical Administration Lead</b> &mdash; IBM, NZ Police INCIS, Wellington NZ (1998&ndash;1999).</li>
+        <li><b>Technical Lead, Investment Banking Trading Floor</b> &mdash; Westpac Investment Banking, Wellington NZ (1997&ndash;1998).</li>
+        <li><b>Foundational roles</b> &mdash; hardware engineering, structured cabling, helpdesk and systems administration, Wellington NZ (1994&ndash;1997).</li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="sec">
+    <h2>Certifications</h2>
+    <p class="plain"><b>Enterprise & Business Architecture:</b> TOGAF&reg; 9.2 Certified &middot; Certified Business Architect (CBA&reg;, 2025) &middot; SAP Enterprise Architecture Fundamentals (2026) &middot; OrbusInfinity Foundations (2025)</p>
+    <p class="plain"><b>Cloud Platforms:</b> Microsoft Certified Azure Solutions Architect Expert (renewed to 2027) &middot; Microsoft Certified Azure Administrator Associate (renewed to 2027) &middot; AWS Databricks Platform Architect (2025) &middot; Azure Databricks Platform Architect</p>
+    <p class="plain"><b>Cybersecurity:</b> ISO/IEC 27001 Information Security Associate &middot; Google Cloud Cybersecurity (2025) &middot; API Security Architect (API Academy) &middot; Palo Alto Networks PSE: Foundation &middot; Fortinet Certified Associate &mdash; Cybersecurity &middot; Microsoft Sentinel Ninja &middot; Microsoft Defender for Endpoint Ninja</p>
+    <p class="plain"><b>AI & Emerging Tools:</b> Claude Code in Action, Claude Code 101, Claude 101 &mdash; Anthropic (2026)</p>
+    <p class="plain"><b>Delivery & Methodology:</b> Commvault Solution Architect (CVSA24) &middot; Lean Six Sigma Green Belt &middot; PRINCE2 &middot; ITIL &middot; Scrum Master</p>
+  </section>
+
+  <section class="sec">
+    <h2>Memberships & Partnerships</h2>
+    <p class="plain">Association of Enterprise Architects &middot; SABSA Institute &middot; Business Architecture Guild &middot; DAMA Australia &middot; Iasa Global &middot; Project Management Institute &middot; Microsoft Partner &middot; AWS Partner &middot; Google Cloud Partner</p>
+  </section>
+
+  <section class="sec">
+    <h2>Education</h2>
+    <p class="plain"><b>Certificate in Business Information Systems</b> &mdash; Wellington Institute of Technology (WelTec), Wellington, New Zealand.</p>
+  </section>
+
+  <section class="sec">
+    <h2>Published Work & Advisory</h2>
+    <p class="plain"><b>Book in progress:</b> Enterprise Architecture as a Functional Decision System &mdash; chapters published across an ongoing series, authored through the Ordo Animi practice.</p>
+    <p class="plain"><b>Angel Investor & Technical Advisor</b>, Func Ventures (2023&ndash;Present) &mdash; technical due diligence and architecture advisory for early-stage technology investments alongside Func Ventures Managing Partner Chris Birrell (formerly CIO Blue Coat Systems, SVP IT Symantec, GM Mincom Malaysia).</p>
+  </section>
+
+  <section class="sec refs">
+    <h2>References</h2>
+    <div class="ref">
+      <div class="who">Richard Scott</div>
+      <div>Executive Consultant & Investor &middot; Former SVP Managed Services ABB/Ventyx &middot; Former Program Director Symantec &middot; Director of Operations Planet6</div>
+      <div class="quote">&ldquo;Phil is the go-to person for high-value, business-critical projects. I have engaged him across Australia, Asia, and the USA. He takes accountability for quality, timelines, and outcomes. Highly recommended.&rdquo;</div>
+    </div>
+    <div class="ref">
+      <div class="who">Chris Birrell</div>
+      <div>Founder & Managing Partner, Func Ventures &middot; Former CIO Blue Coat Systems &middot; Former SVP IT Symantec &middot; Former GM Mincom Malaysia &middot; Chairman Planet6</div>
+    </div>
+    <p class="avail">Fifteen-year working relationship across four organisations. Additional references available upon request.</p>
+  </section>
+
+  <div class="rfoot">
+    <span>PHIL MYINT &middot; PRINCIPAL SOLUTION ARCHITECT</span>
+    <span>CLARITY. GOVERNANCE. EXECUTION.</span>
+  </div>
+</div>
+
+</body>
+</html>
