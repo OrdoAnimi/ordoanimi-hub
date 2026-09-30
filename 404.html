@@ -3,19 +3,20 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Page not found &mdash; Ordo Animi</title>
+<title>Page not found &mdash; OrdoAnimi</title>
 <meta name="robots" content="noindex">
 <link rel="icon" type="image/svg+xml" href="/favicon.svg">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;1,600&family=DM+Sans:wght@400;500&display=swap">
+<link rel="stylesheet" href="/oa-tokens.css">
 <style>
 :root{
-  --ink:#0b0e11;
-  --paper:#faf7ef;         --paper-rgb:250,247,239;
-  --surface-2:#ebe4d2;
-  --theme-color:#b8924e;
-  --gilt-light:#d4b36a;
+  --ink:var(--oa-ink);
+  --paper:var(--oa-card);         --paper-rgb:250,247,239;
+  --surface-2:var(--oa-sunken);
+  --theme-color:var(--oa-gold);
+  --gilt-light:var(--oa-gold-light);
 }
 *{margin:0;padding:0;box-sizing:border-box}
 body{background:var(--ink);color:var(--paper);font-family:'DM Sans',system-ui,sans-serif;min-height:100vh;display:flex;align-items:center;justify-content:center;text-align:center;padding:2rem}
@@ -33,7 +34,7 @@ a.btn:focus-visible{outline:3px solid var(--theme-color);outline-offset:3px}
   <p class="code">404</p>
   <h1>This page doesn&rsquo;t exist.</h1>
   <p>The page you&rsquo;re looking for has moved or never did. Head back to the homepage.</p>
-  <a class="btn" href="/">Return to Ordo Animi</a>
+  <a class="btn" href="/">Return to OrdoAnimi</a>
 </div>
 </body>
 </html>
