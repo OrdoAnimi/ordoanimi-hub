@@ -7,7 +7,8 @@
       "has": [{ "type": "host", "value": "ordoanimi.com" }],
       "destination": "https://www.ordoanimi.com/$1",
       "permanent": true
-    }
+    },
+    { "source": "/resume", "destination": "https://myint.ordoanimi.com/resume", "permanent": true }
   ],
   "headers": [
     {
